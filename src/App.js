@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import PostDetail from './components/PostDetail/PostDetail';
 
 function App() {
   return (
@@ -40,8 +41,11 @@ function App() {
           <Route path="/about">
              <About/>
           </Route>
-          <Route path="/dashboard">
-            
+          <Route path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/post/:id">
+            <PostDetail></PostDetail>
           </Route>
         </Switch>
       </div>
